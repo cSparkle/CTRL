@@ -13,6 +13,11 @@ namespace CTRL.Core.Database
             _connection = connection;
         }
 
+        public void ExecuteStoredProcedureCommand(string sproc, DynamicParameters parameters)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<T> ExecuteStoredProcedureQuery<T>(string sproc, DynamicParameters parameters)
         {
             throw new System.NotImplementedException();
