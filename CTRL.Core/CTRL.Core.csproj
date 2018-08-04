@@ -53,6 +53,9 @@
     <PackageReference Include="Dapper">
       <Version>1.50.5</Version>
     </PackageReference>
+    <PackageReference Include="MySql.Data">
+      <Version>8.0.12</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
