@@ -56,6 +56,9 @@
     <PackageReference Include="MySql.Data">
       <Version>8.0.12</Version>
     </PackageReference>
+    <PackageReference Include="Ninject.MVC4">
+      <Version>3.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
