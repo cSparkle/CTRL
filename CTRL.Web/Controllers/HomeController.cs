@@ -1,16 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CTRL.Domain.Classes;
+using CTRL.Domain.Interfaces;
 using System.Web.Mvc;
 
 namespace CTRL.Web.Controllers
 {
     public class HomeController : Controller
     {
+        ILoginRepository repository;
+
+        public HomeController(ILoginRepository repository)
+        {
+            this.repository = repository;
+        }
+
         public ActionResult Index()
         {
             return View();
+        }
+
+        public string TestLogin(LoginContract contract)
+        {
+            var user = repository.GetUser(contract);
+            return user.IsActive ? "Logged In" : "Login Failed";
         }
 
         public ActionResult About()

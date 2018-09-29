@@ -4,8 +4,12 @@
 namespace CTRL.Web.App_Start
 {
     using System;
+    using System.Configuration;
     using System.Web;
-
+    using CTRL.Core.Database;
+    using CTRL.Core.Interfaces;
+    using CTRL.Domain.Interfaces;
+    using CTRL.Domain.Repositories;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
@@ -55,12 +59,22 @@ namespace CTRL.Web.App_Start
             }
         }
 
+        private static string GetConnectionString()
+        {
+            var connectionString = ConfigurationManager.ConnectionStrings["CTRL"].ConnectionString;
+            return connectionString;
+        }
+
         /// <summary>
         /// Load your modules or register your services here!
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var connectionString = GetConnectionString();
+            kernel.Bind<IDatabaseConnection>().To<DatabaseConnection>().InSingletonScope().WithConstructorArgument("connectionString", connectionString);
+            kernel.Bind<IRepository>().To<Repository>().InSingletonScope();
+            kernel.Bind<ILoginRepository>().To<LoginRepository>().InSingletonScope();
         }        
     }
 }

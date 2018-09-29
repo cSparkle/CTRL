@@ -50,5 +50,15 @@
       <Version>3.10.0</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CTRL.Domain\CTRL.Domain.csproj">
+      <Project>{980A289C-BB07-4B74-A5DF-D87DBAF193C5}</Project>
+      <Name>CTRL.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CTRL.Web\CTRL.Web.csproj">
+      <Project>{F20E7E69-372C-4AD6-A106-05C306057E8D}</Project>
+      <Name>CTRL.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

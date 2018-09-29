@@ -2,6 +2,6 @@
 {
     public static class DomainStoredProcedures
     {
-        public const string GetUserByLoginContract = "";
+        public const string GetUserByLoginContract = "GetUserByLoginContract";
     }
 }

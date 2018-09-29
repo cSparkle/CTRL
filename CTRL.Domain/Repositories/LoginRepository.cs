@@ -3,6 +3,7 @@ using CTRL.Domain.Classes;
 using CTRL.Domain.Constants;
 using CTRL.Domain.Interfaces;
 using Dapper;
+using System.Data;
 using System.Linq;
 
 namespace CTRL.Domain.Repositories
@@ -24,7 +25,7 @@ namespace CTRL.Domain.Repositories
             parameters.Add("@password", contract.Password);
 
             var user = _repository.ExecuteStoredProcedureQuery<UserProfile>(DomainStoredProcedures.GetUserByLoginContract, parameters)
-                .FirstOrDefault() ?? new UserProfile() { LoginName = InvalidUser, IsActive = false };
+                .FirstOrDefault() ?? new UserProfile() { LoginName = InvalidUser };
 
             return user;
         }
