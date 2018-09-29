@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using CTRL.Core.Interfaces;
 using Dapper;
 using MySql.Data.MySqlClient;
@@ -18,7 +19,7 @@ namespace CTRL.Core.Database
         {
             using (MySqlConnection connection = new MySqlConnection(_connection.ConnectionString))
             {
-                connection.Execute(sproc, parameters);
+                connection.Execute(sproc, parameters, commandType: CommandType.StoredProcedure);
             };
         }
 
@@ -26,7 +27,7 @@ namespace CTRL.Core.Database
         {
             using (MySqlConnection connection = new MySqlConnection(_connection.ConnectionString))
             {
-                return connection.Query<T>(sproc, parameters) ?? new List<T>();
+                return connection.Query<T>(sproc, parameters, commandType: CommandType.StoredProcedure) ?? new List<T>();
             };
         }
     }

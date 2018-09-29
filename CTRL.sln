@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QualityAssurance", "Quality
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRL.Domain.UnitTests", "CTRL.Domain.UnitTests\CTRL.Domain.UnitTests.csproj", "{CBB59454-F576-4127-A7BF-40915E345F77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRL.Login", "CTRL.Login\CTRL.Login.csproj", "{889B34CC-75CD-4D30-9365-FC4E96A7D886}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{CBB59454-F576-4127-A7BF-40915E345F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBB59454-F576-4127-A7BF-40915E345F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBB59454-F576-4127-A7BF-40915E345F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889B34CC-75CD-4D30-9365-FC4E96A7D886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889B34CC-75CD-4D30-9365-FC4E96A7D886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889B34CC-75CD-4D30-9365-FC4E96A7D886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889B34CC-75CD-4D30-9365-FC4E96A7D886}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 		{F20E7E69-372C-4AD6-A106-05C306057E8D} = {0C456ED0-C92B-40E9-8985-2F1C988253DE}
 		{980A289C-BB07-4B74-A5DF-D87DBAF193C5} = {5E531A8D-8665-4C93-BC68-DC7E9EF28887}
 		{CBB59454-F576-4127-A7BF-40915E345F77} = {8D0DF7CE-670D-4729-A854-C91871A1C780}
+		{889B34CC-75CD-4D30-9365-FC4E96A7D886} = {0639E962-14F4-4617-B21C-525E9B194E3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A2CB50C-0ED6-4EEF-B89F-F0471BC0DD3A}
