@@ -10,6 +10,8 @@ namespace CTRL.Web.App_Start
     using CTRL.Core.Interfaces;
     using CTRL.Domain.Interfaces;
     using CTRL.Domain.Repositories;
+    using CTRL.Login;
+    using CTRL.Login.Interfaces;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
     using Ninject;
@@ -75,6 +77,8 @@ namespace CTRL.Web.App_Start
             kernel.Bind<IDatabaseConnection>().To<DatabaseConnection>().InSingletonScope().WithConstructorArgument("connectionString", connectionString);
             kernel.Bind<IRepository>().To<Repository>().InSingletonScope();
             kernel.Bind<ILoginRepository>().To<LoginRepository>().InSingletonScope();
+            kernel.Bind<IAuthorizationRepository>().To<AuthorizationRepository>().InSingletonScope();
+            kernel.Bind<IAuthorizationService>().To<AuthorizationService>().InSingletonScope();
         }        
     }
 }
