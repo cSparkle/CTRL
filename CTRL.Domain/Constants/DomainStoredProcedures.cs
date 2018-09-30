@@ -4,6 +4,6 @@
     {
         public const string GetUserByLoginContract = "GetUserByLoginContract";
 
-        public const string GetAllUserPermissions = "";
+        public const string GetAllUserPermissions = "GetAllUserPermmissions";
     }
 }

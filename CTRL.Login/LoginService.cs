@@ -9,9 +9,9 @@ namespace CTRL.Login
         ILoginRepository loginRepository;
         IAuthorizationService authorizationService;
 
-        public LoginService(ILoginRepository repository, IAuthorizationService authorizationService)
+        public LoginService(ILoginRepository loginRepository, IAuthorizationService authorizationService)
         {
-            this.loginRepository = repository;
+            this.loginRepository = loginRepository;
             this.authorizationService = authorizationService;
         }
 
