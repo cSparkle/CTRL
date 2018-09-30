@@ -2,8 +2,7 @@
 {
     public enum Permission
     {
-        Developer_Access = 1,
-        Vendor_Owner = 2,
-        Buyer_Owner = 3
+        Access_Vendor_Dashboard = 1,
+        Access_Buyer_Dashboard = 2
     }
 }
