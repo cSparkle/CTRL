@@ -269,6 +269,10 @@
       <Project>{980a289c-bb07-4b74-a5df-d87dbaf193c5}</Project>
       <Name>CTRL.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CTRL.Login\CTRL.UserServices.csproj">
+      <Project>{889B34CC-75CD-4D30-9365-FC4E96A7D886}</Project>
+      <Name>CTRL.UserServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

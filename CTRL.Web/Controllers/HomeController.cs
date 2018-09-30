@@ -1,16 +1,17 @@
 ﻿using CTRL.Domain.Classes;
 using CTRL.Domain.Interfaces;
+using CTRL.Login.Interfaces;
 using System.Web.Mvc;
 
 namespace CTRL.Web.Controllers
 {
     public class HomeController : Controller
     {
-        ILoginRepository repository;
+        ILoginService loginService;
 
-        public HomeController(ILoginRepository repository)
+        public HomeController(ILoginService loginService)
         {
-            this.repository = repository;
+            this.loginService = loginService;
         }
 
         public ActionResult Index()
@@ -20,7 +21,7 @@ namespace CTRL.Web.Controllers
 
         public string TestLogin(LoginContract contract)
         {
-            var user = repository.GetUser(contract);
+            var user = loginService.GetUser(contract);
             return user.IsActive ? "Logged In" : "Login Failed";
         }
 

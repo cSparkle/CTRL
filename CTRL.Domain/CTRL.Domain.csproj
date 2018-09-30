@@ -41,10 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\LoginContract.cs" />
+    <Compile Include="Classes\Permission.cs" />
     <Compile Include="Classes\UserProfile.cs" />
     <Compile Include="Constants\DomainStoredProcedures.cs" />
+    <Compile Include="Interfaces\IAuthorizationRepository.cs" />
     <Compile Include="Interfaces\ILoginRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AuthorizationRepository.cs" />
     <Compile Include="Repositories\LoginRepository.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,16 +6,23 @@ namespace CTRL.Login
 {
     public class LoginService : ILoginService
     {
-        ILoginRepository _loginRepository;
+        ILoginRepository loginRepository;
+        IAuthorizationService authorizationService;
 
-        public LoginService(ILoginRepository repository)
+        public LoginService(ILoginRepository loginRepository, IAuthorizationService authorizationService)
         {
-            _loginRepository = repository;
+            this.loginRepository = loginRepository;
+            this.authorizationService = authorizationService;
         }
 
         public UserProfile GetUser(LoginContract contract)
         {
-            var user = _loginRepository.GetUser(contract);
+            var user = loginRepository.GetUser(contract);
+            if (user.IsActive)
+            {
+                user.Permissions = authorizationService.GetUserPermissions(user);
+            }
+
             return user;
         }
     }
